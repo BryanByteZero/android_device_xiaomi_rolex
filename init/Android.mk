@@ -16,14 +16,8 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-ifneq ($(CUSTOM_VERIFY_PACKAGE),)
-VERIFY_PACKAGE := $(CUSTOM_VERIFY_PACKAGE)
-else
-VERIFY_PACKAGE := /system/app/SystemSync/SystemSync.apk
-endif
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
 LOCAL_SRC_FILES := init_rolex.cpp
 LOCAL_MODULE := libinit_rolex
-LOCAL_CPPFLAGS += -DVERIFY_PACKAGE=\"$(VERIFY_PACKAGE)\"
 include $(BUILD_STATIC_LIBRARY)

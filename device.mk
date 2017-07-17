@@ -245,7 +245,7 @@ PRODUCT_PACKAGES += \
 		libdhcpcd
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-		sys.init_log_level=8 \
+		sys.init_log_level=7 \
 		ro.secure=0 \
     ro.adb.secure=0 \
     camera2.portability.force_api=1
